@@ -8,6 +8,7 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/',
   },
+  devtool: 'source-map',
   resolve: {
     modules: [`${process.cwd()}/src`, 'node_modules'],
   },
