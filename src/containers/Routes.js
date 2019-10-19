@@ -1,16 +1,18 @@
 import React from 'react';
 import createBrowserHistory from 'history/createBrowserHistory';
 import { Router, Route } from 'react-router-dom';
-import PageA from 'containers/PageA/PageA';
-import PageB from 'containers/PageB';
+import MainPage from 'containers/MainPage';
+import MapPage from 'containers/MapPage';
+import LoginPage from 'containers/LoginPage';
 
 const history = createBrowserHistory();
 
 export default () => (
   <Router history={history}>
     <main>
-      <Route path="/" exact component={PageA} />
-      <Route path="/pageB" component={PageB} />
+      <Route path="/" exact component={LoginPage} />
+      <Route path="/main" component={MainPage} />
+      <Route path="/map" component={MapPage} />
     </main>
   </Router>
 );
